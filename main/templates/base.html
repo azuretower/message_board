@@ -1,0 +1,35 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Board</title>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/message_board.css' %}" rel="stylesheet">
+</head>
+<body>
+    
+    {% include 'nav_bar.html' %}
+
+    <div id='title-stuff'>
+        <h1>Azure Tower</h1>
+        <h3>The Message Board</h3>
+        <br>
+    </div>
+
+    {% block content %}
+        
+    {% endblock content %}
+
+
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'js/message_board.js' %}"></script>
+</body>
+</html>

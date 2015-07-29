@@ -1,0 +1,11 @@
+{% for message in messages %}
+    <div class="message">
+        <h2 class="message-title">
+            {{ message.title }}
+        </h2>
+        <h3 class="message-text">
+            {{ message.text }}
+        </h3>
+        <p class="message-date">Posted by <a href="#">{{ message.author.username }}</a> on {{ message.date_posted }}</p>
+    </div>
+{% endfor %}
