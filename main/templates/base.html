@@ -11,10 +11,12 @@
     
     {% include 'nav_bar.html' %}
 
-    <div id='title-stuff'>
-        <h1>Azure Tower</h1>
-        <h3>The Message Board</h3>
-        <br>
+    <div id='title-stuff' class='container'>
+        <div class='row'>
+            <h2>Azure Tower</h2>
+            <h5>The Message Board</h5>
+            <br>
+        </div>
     </div>
 
     {% block content %}
@@ -31,5 +33,6 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'js/message_board.js' %}"></script>
+    <script type='text/javascript' src="{% static 'jquery-grab-bag/javascripts/jquery.autogrow-textarea.js' %}"></script>
 </body>
 </html>
