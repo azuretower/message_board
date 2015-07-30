@@ -7,6 +7,7 @@ class Message(models.Model):
     text = models.TextField()
     author = models.ForeignKey(User)
     date_posted = models.DateTimeField(auto_now_add=True)
+    favorite = models.ManyToManyField(User, related_name='favorites', blank=True)
 
     def __unicode__(self):
         return self.title

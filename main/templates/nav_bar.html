@@ -16,8 +16,9 @@
       <ul class="nav navbar-nav navbar-right">
       <li><a href="{% url 'front' %}">Home</a></li>
       
-      <li><a href="#">Check for new posts</a></li>
-        
+      {% if request.path == '/' %}
+        <li><a href="#">Check for new posts</a></li>
+      {% endif %}
 
         {% if user.is_authenticated %}
           <li class="dropdown">

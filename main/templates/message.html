@@ -1,4 +1,8 @@
-{% for message in messages %}
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
     <div data-message-id='{{ message.id }}' class="message">
         <h4 class="message-title">
             {{ message.title }}
@@ -13,4 +17,5 @@
             <a class='favorite-message-link'><span class='glyphicon glyphicon-star-empty'></span></a>
         </p>
     </div>
-{% endfor %}
+    
+{% endblock content %}

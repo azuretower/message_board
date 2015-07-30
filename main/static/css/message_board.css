@@ -12,6 +12,11 @@ body {
     float: right;
 }
 
+.message span {
+    font-size: 20pt;
+    float: right;
+}
+
 #title-stuff {
     text-align: center;
     padding-top: 5px;
