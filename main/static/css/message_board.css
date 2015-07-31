@@ -16,6 +16,9 @@ body {
     font-size: 20pt;
     float: right;
 }
+.message .glyphicon-trash {
+    font-size: 22px;
+}
 
 #title-stuff {
     text-align: center;
