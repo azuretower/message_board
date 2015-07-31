@@ -9,17 +9,18 @@ function loadMessages() {
     })
 }
 
-$('#submit-button').click(function(e) {
-    e.preventDefault();
+// $('#submit-button').click(function(e) {
+//     e.preventDefault();
+//     var id = $(this).parents('.message').attr('data-message-id');
 
-    $.ajax({
-        url: '/message/',
-        success: function(result) {
-            $('#all-messages').append(result);
-        }
-    })
+//     $.ajax({
+//         url: '/message/' + id + '/',
+//         success: function(result) {
+//             $('#all-messages').prepend(result);
+//         }
+//     })
 
-})
+// })
 
 $('#all-messages').on('click', '.delete-message-link', function(e){
     e.preventDefault();

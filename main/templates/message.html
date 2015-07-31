@@ -6,7 +6,7 @@
     <div data-message-id='{{ message.id }}' class="message">
         <h4 class="message-title">
             {{ message.title }}
-            {% if user.is_superuser or perms.main.message.can_delete_message %}
+            {% if permission == 'is_admin' %}
                 <a class='delete-message-link text-danger'><span class='glyphicon glyphicon-trash'></span></a>
             {% endif %}
         </h4>
