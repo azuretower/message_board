@@ -5,7 +5,7 @@ from main.forms import MessageForm
 from django.http import HttpResponse
 
 import user_auth
-from user_auth import is_super
+from user_auth import is_admin
 
 
 @login_required
@@ -28,6 +28,9 @@ def front(request):
 
         form = MessageForm(request.POST)
 
+        if is_admin(request.user):
+            context['permission'] = 'is_admin'
+
         if form.is_valid():
             message = form.save()
             context['result'] = 'Your post has been saved'
@@ -38,18 +41,22 @@ def front(request):
 
 
 @login_required
-# @user_passes_test(is_super)
 def all_messages(request):
+    context = {}
     messages = Message.objects.all().order_by('-date_posted')
+    context['messages'] = messages
 
-    return render(request, 'all_messages.html', {'messages': messages})
+    if is_admin(request.user):
+            context['permission'] = 'is_admin'
+
+    return render(request, 'all_messages.html', context)
 
 
 def edit_message(request, id):
 
     if request.method == 'DELETE':
 
-        if request.user.is_superuser:
+        if request.user.is_superuser or is_admin(request.user):
 
             Message.objects.get(id=id).delete()
 

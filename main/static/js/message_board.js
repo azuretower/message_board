@@ -9,6 +9,18 @@ function loadMessages() {
     })
 }
 
+$('#submit-button').click(function(e) {
+    e.preventDefault();
+
+    $.ajax({
+        url: '/message/',
+        success: function(result) {
+            $('#all-messages').append(result);
+        }
+    })
+
+})
+
 $('#all-messages').on('click', '.delete-message-link', function(e){
     e.preventDefault();
     var id = $(this).parents('.message').attr('data-message-id');

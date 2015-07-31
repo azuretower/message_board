@@ -62,5 +62,5 @@ def logout(request):
     return redirect('login')
 
 
-def is_super(user):
-    return user.is_superuser
+def is_admin(user):
+    return user.is_superuser or user.groups.filter(name='admins').exists()
