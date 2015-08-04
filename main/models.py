@@ -1,5 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
+# from django.contrib.auth.models import AbstractUser
+
+
+# class CustomUser(AbstractUser):
+#     date_of_birth = models.DateField(blank=True, null=True)
+#     height = models.FloatField(blank=True, null=True)
 
 
 class Message(models.Model):

@@ -2,16 +2,16 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import django.contrib.auth.models
 import django.utils.timezone
-from django.conf import settings
 import django.core.validators
+import django.contrib.auth.models
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
         ('auth', '0006_require_contenttypes_0002'),
+        ('main', '0004_auto_20150730_2224'),
     ]
 
     operations = [
@@ -41,17 +41,6 @@ class Migration(migrations.Migration):
             },
             managers=[
                 ('objects', django.contrib.auth.models.UserManager()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Message',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('title', models.CharField(default=b"i can't think of a title", max_length=255)),
-                ('text', models.TextField()),
-                ('date_posted', models.DateTimeField(auto_now_add=True)),
-                ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
-                ('favorite', models.ManyToManyField(related_name='favorites', to=settings.AUTH_USER_MODEL, blank=True)),
             ],
         ),
     ]
