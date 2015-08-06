@@ -4,7 +4,7 @@
 
     <div class='container wrapper'>
         <div class='row'>
-            <form id='user-login-form' class='col-sm-offset-3 col-sm-6' method='POST'action="{% url 'login' %}#user-login-form" style='{% if error_on_create %}display:none{% endif %}'>
+            <form id='user-login-form' class='col-sm-offset-3 col-sm-6' method='POST'action="{% url 'login' %}" style='{% if error_on_create %}display:none{% endif %}'>
 
                 <input type="hidden" name='type' value='login'>
 
@@ -22,8 +22,6 @@
                 <button type='submit' class='btn'>Login</button>
 
                 <a href='#' id='switch-to-create'>Create a User</a>
-
-                
         
             </form>
             </div>

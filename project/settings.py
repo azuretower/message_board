@@ -76,27 +76,27 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 # mysql settings
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'message_board',
-#         'HOST': '127.0.0.1',
-#         'USER': 'root',
-#         'PASSWORD': 'root',
-#         'PORT': '',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite',
-        'USER': '',#not needed
-        'PASSWORD': '',#not needed
-        'HOST': '',#not needed
-        'PORT': '',#not needed
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'message_board',
+        'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'PORT': '',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'db.sqlite',
+#         'USER': '',  # not needed
+#         'PASSWORD': '',  # not needed
+#         'HOST': '',  # not needed
+#         'PORT': '',  # not needed
+#     }
+# }
 
 # settings for postgres
 # DATABASES = {

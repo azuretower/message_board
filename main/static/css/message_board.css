@@ -10,6 +10,8 @@ body {
 
 #show-create-message {
     float: right;
+    margin-top: 12px;
+    margin-right: 12px;
 }
 
 .message span {
