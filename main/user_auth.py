@@ -43,8 +43,8 @@ def login(request):
                 user.email = request.POST['email']
                 user.save()
 
-                group = Group.objects.get(name='users')
-                group.user_set.add(user)
+                # group = Group.objects.get(name='users')
+                # group.user_set.add(user)
 
                 user = authenticate(username=user.username, password=request.POST['password1'])
                 auth_login(request, user)
