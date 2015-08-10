@@ -76,16 +76,16 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 # mysql settings
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'message_board',
-        'HOST': '127.0.0.1',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'message_board',
+#         'HOST': '127.0.0.1',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'PORT': '',
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -95,18 +95,6 @@ DATABASES = {
 #         'PASSWORD': '',  # not needed
 #         'HOST': '',  # not needed
 #         'PORT': '',  # not needed
-#     }
-# }
-
-# settings for postgres
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'message_board',
-#         'HOST': '127.0.0.1',
-#         'USER': '',
-#         'PASSWORD': '',
-#         'PORT': '5432',
 #     }
 # }
 
@@ -136,3 +124,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_URL = 'login'
 
 # AUTH_USER_MODEL = 'main.CustomUser'
+
+from local_settings import *
