@@ -63,4 +63,4 @@ def logout(request):
 
 
 def is_admin(user):
-    return user.is_superuser or  # user.groups.filter(name='admins').exists()
+    return user.is_superuser  # user.groups.filter(name='admins').exists()

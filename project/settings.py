@@ -20,13 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ium#$05$u5dh!gv88ukawb!-y#4!+1p&t^hd4k15%cx-#93_i0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -75,28 +70,6 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-# mysql settings
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'message_board',
-#         'HOST': '127.0.0.1',
-#         'USER': 'root',
-#         'PASSWORD': 'root',
-#         'PORT': '',
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'db.sqlite',
-#         'USER': '',  # not needed
-#         'PASSWORD': '',  # not needed
-#         'HOST': '',  # not needed
-#         'PORT': '',  # not needed
-#     }
-# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
