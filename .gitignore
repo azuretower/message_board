@@ -2,6 +2,8 @@ db.sqlite3
 
 *.DS_Store
 
+local_settings.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
