@@ -2,7 +2,7 @@ import os
 from settings import BASE_DIR
 
 # http://www.miniwebtool.com/django-secret-key-generator/
-SECRET_KEY = '2s&)rlm3k5^6^*279n*qv#kf03p$l$%x-bsg(o0umf!nnxupj='
+SECRET_KEY = ''
 
 DATABASES = {
     'default': {

@@ -17,12 +17,5 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('github_webhooks.urls')),
-
-    url(r'^$', 'main.views.front', name='front'),
-    url(r'^login/$', 'main.user_auth.login', name='login'),
-    url(r'^logout/$', 'main.user_auth.logout', name='logout'),
-    url(r'^message/(?P<id>[0-9]+)/$', 'main.views.edit_message', name='edit_message'),
-    url(r'^all-messages/$', 'main.views.all_messages', name='all_messages'),
+    url(r'^hooks/$', 'github_webhooks.views.update_view'),
 ]
