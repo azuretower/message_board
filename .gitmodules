@@ -1,0 +1,3 @@
+[submodule "github_webhooks"]
+	path = github_webhooks
+	url = https://github.com/azuretower/github_webhooks.git
