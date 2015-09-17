@@ -4,6 +4,8 @@ db.sqlite3
 
 local_settings.py
 
+/static/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
